@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Practice</title>
+</head>
+<body>
+    <h1>아무거나 먹자</h1>
+    <p>점심: {{메뉴명}}</p>
+
+    <p>예산: {{가격}}</p>
+    <p>
+    드실분:
+    <ul>
+        {% for 드실사람들은 in 손님 %} <!--for 뒤에 매개변수 띄어쓰면 안됨-->
+        <li>{{드실사람들은}}</li>
+        {% endfor %}
+    </ul>
+    </p>
+    <p>
+        밥먹는 사람: {{손님}}
+    </p>
+</body>
+</html>
